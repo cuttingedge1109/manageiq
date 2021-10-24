@@ -103,49 +103,9 @@ gem "american_date"
 # This default is used to automatically require all of our gems in processes that don't specify which bundler groups they want.
 #
 ### providers
-group :amazon, :manageiq_default do
-  manageiq_plugin "manageiq-providers-amazon"
-  gem "amazon_ssa_support",                                  :require => false, :git => "https://github.com/ManageIQ/amazon_ssa_support.git", :branch => "master" # Temporary dependency to be moved to manageiq-providers-amazon when officially release
-end
 
 group :ansible_tower, :manageiq_default do
   manageiq_plugin "manageiq-providers-ansible_tower"
-end
-
-group :autosde, :manageiq_default do
-  manageiq_plugin "manageiq-providers-autosde"
-end
-
-group :azure, :manageiq_default do
-  manageiq_plugin "manageiq-providers-azure"
-end
-
-group :azure_stack, :manageiq_default do
-  manageiq_plugin "manageiq-providers-azure_stack"
-end
-
-group :foreman, :manageiq_default do
-  manageiq_plugin "manageiq-providers-foreman"
-end
-
-group :google, :manageiq_default do
-  manageiq_plugin "manageiq-providers-google"
-end
-
-group :ibm_cloud, :manageiq_default do
-  manageiq_plugin "manageiq-providers-ibm_cloud"
-end
-
-group :ibm_power_hmc, :manageiq_default do
-  manageiq_plugin "manageiq-providers-ibm_power_hmc"
-end
-
-group :ibm_power_vc, :manageiq_default do
-  manageiq_plugin "manageiq-providers-ibm_power_vc"
-end
-
-group :ibm_terraform, :manageiq_default do
-  manageiq_plugin "manageiq-providers-ibm_terraform"
 end
 
 group :kubernetes, :openshift, :manageiq_default do
@@ -154,22 +114,6 @@ end
 
 group :kubevirt, :manageiq_default do
   manageiq_plugin "manageiq-providers-kubevirt"
-end
-
-group :lenovo, :manageiq_default do
-  manageiq_plugin "manageiq-providers-lenovo"
-end
-
-group :nsxt, :manageiq_default do
-  manageiq_plugin "manageiq-providers-nsxt"
-end
-
-group :nuage, :manageiq_default do
-  manageiq_plugin "manageiq-providers-nuage"
-end
-
-group :oracle_cloud, :manageiq_default do
-  manageiq_plugin "manageiq-providers-oracle_cloud"
 end
 
 group :redfish, :manageiq_default do
@@ -192,15 +136,6 @@ end
 
 group :openstack, :manageiq_default do
   manageiq_plugin "manageiq-providers-openstack"
-end
-
-group :ovirt, :manageiq_default do
-  manageiq_plugin "manageiq-providers-ovirt"
-  gem "ovirt_metrics",                  "~>3.0.1",           :require => false
-end
-
-group :scvmm, :manageiq_default do
-  manageiq_plugin "manageiq-providers-scvmm"
 end
 
 group :vmware, :manageiq_default do

@@ -18,6 +18,12 @@ def manageiq_plugin(plugin_name)
   end
 end
 
+def manageiq_custom_plugin(plugin_name)
+  unless dependencies.detect { |d| d.name == plugin_name }
+    gem plugin_name, :git => "https://github.com/cuttingedge1109/#{plugin_name}", :branch => "master"
+  end
+end
+
 manageiq_plugin "manageiq-schema"
 
 # Unmodified gems
@@ -246,7 +252,7 @@ end
 
 group :ui_dependencies do # Added to Bundler.require in config/application.rb
   manageiq_plugin "manageiq-decorators"
-  manageiq_plugin "manageiq-ui-classic"
+  manageiq_custom_plugin "manageiq-ui-classic"
   # Modified gems (forked on Github)
   gem "jquery-rjs",                     "=0.1.1.2",          :source => "https://rubygems.manageiq.org"
 end

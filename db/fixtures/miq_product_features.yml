@@ -7223,3 +7223,207 @@
       :feature_type: control
       :hidden: false
       :identifier: add_global_filter
+
+
+# EmsCICD
+- :name: CICD Providers
+  :description: Everything under CICD Providers
+  :feature_type: node
+  :identifier: ems_cicd
+  :children:
+  - :name: View
+    :description: View CICD Providers
+    :feature_type: view
+    :identifier: ems_cicd_view
+    :children:
+    - :name: List
+      :description: Display Lists of CICD Providers
+      :feature_type: view
+      :identifier: ems_cicd_show_list
+    - :name: Show
+      :description: Display Individual CICD Providers
+      :feature_type: view
+      :identifier: ems_cicd_show
+    - :name: Utilization
+      :description: Show Capacity & Utilization data of Providers
+      :feature_type: view
+      :identifier: ems_cicd_perf
+    - :name: Ad hoc Metrics
+      :description: Show Ad hoc Metrics of Providers
+      :feature_type: view
+      :identifier: ems_cicd_ad_hoc_metrics
+    - :name: Capture Metrics
+      :description: Capture metrics related to this CICD Provider
+      :feature_type: view
+      :identifier: ems_cicd_capture_metrics
+    - :name: Timeline
+      :description: Display Timelines for CICD Providers
+      :feature_type: view
+      :identifier: ems_cicd_timeline
+  - :name: Operate
+    :description: Perform Operations on CICD Providers
+    :feature_type: control
+    :identifier: ems_cicd_control
+    :children:
+    - :name: Refresh
+      :description: Refresh CICD Providers
+      :feature_type: control
+      :identifier: ems_cicd_refresh
+    - :name: Resume
+      :description: Enable CICD Providers
+      :feature_type: control
+      :identifier: ems_cicd_resume
+    - :name: Pause
+      :description: Disable CICD Providers
+      :feature_type: control
+      :identifier: ems_cicd_pause
+    - :name: Edit Tags
+      :description: Edit Tags of CICD Providers
+      :feature_type: control
+      :identifier: ems_cicd_tag
+    - :name: Manage Policies
+      :description: Manage Policies of CICD Providers
+      :feature_type: control
+      :identifier: ems_cicd_protect
+    - :name: Re-check Authentication Status
+      :description: Re-check Authentication Status of CICD Providers
+      :feature_type: control
+      :identifier: ems_cicd_recheck_auth_status
+    - :name: Check Compliance
+      :description: Check Compliance of Last Known Configuration
+      :feature_type: control
+      :identifier: ems_cicd_check_compliance
+    - :name: Launch External Logging
+      :description: Open External Logging from CICD Provider
+      :feature_type: control
+      :identifier: ems_cicd_launch_external_logging
+  - :name: Modify
+    :description: Modify CICD Providers
+    :feature_type: admin
+    :identifier: ems_cicd_admin
+    :children:
+    - :name: Remove
+      :description: Remove CICD Provider
+      :feature_type: admin
+      :identifier: ems_cicd_delete
+    - :name: Edit
+      :description: Edit a CICD Provider
+      :feature_type: admin
+      :identifier: ems_cicd_edit
+    - :name: Add
+      :description: Add a CICD Provider
+      :feature_type: admin
+      :identifier: ems_cicd_new
+
+
+# CICDPipeline
+- :name: Pipeines
+  :description: Everything under CICD Pipelines
+  :feature_type: node
+  :identifier: pipeine
+  :children:
+  - :name: View
+    :description: View CICD Pipelines
+    :feature_type: view
+    :identifier: pipeine_view
+    :children:
+    - :name: List
+      :description: Display Lists of CICD Pipelines
+      :feature_type: view
+      :identifier: pipeine_show_list
+    - :name: Show
+      :description: Display Individual CICD Pipeline
+      :feature_type: view
+      :identifier: pipeine_show
+    - :name: Utilization
+      :description: Show Capacity & Utilization data of Pipeline
+      :feature_type: view
+      :identifier: pipeine_perf
+    - :name: Timeline
+      :description: Display Timelines for CICD Pipelines
+      :feature_type: view
+      :identifier: pipeine_timeline
+  - :name: Operate
+    :description: Perform Operations on CICD Pipelines
+    :feature_type: control
+    :identifier: pipeine_control
+    :children:
+    - :name: Edit Tags
+      :description: Edit Tags of CICD Pipelines
+      :feature_type: control
+      :identifier: pipeine_tag
+
+
+# CICDJob
+- :name: Jobs
+  :description: Everything under CICD Jobs
+  :feature_type: node
+  :identifier: ci_job
+  :children:
+  - :name: View
+    :description: View CICD Jobs
+    :feature_type: view
+    :identifier: ci_job_view
+    :children:
+    - :name: List
+      :description: Display Lists of CICD Jobs
+      :feature_type: view
+      :identifier: ci_job_show_list
+    - :name: Show
+      :description: Display Individual CICD Job
+      :feature_type: view
+      :identifier: ci_job_show
+    - :name: Utilization
+      :description: Show Capacity & Utilization data of Job
+      :feature_type: view
+      :identifier: ci_job_perf
+    - :name: Timeline
+      :description: Display Timelines for CICD Jobs
+      :feature_type: view
+      :identifier: ci_job_timeline
+  - :name: Operate
+    :description: Perform Operations on CICD Jobs
+    :feature_type: control
+    :identifier: ci_job_control
+    :children:
+    - :name: Edit Tags
+      :description: Edit Tags of CICD Jobs
+      :feature_type: control
+      :identifier: ci_job_tag
+
+# CICDSchedule
+- :name: Schedules
+  :description: Everything under CICD Schedules
+  :feature_type: node
+  :identifier: ci_schedule
+  :children:
+  - :name: View
+    :description: View CICD Schedules
+    :feature_type: view
+    :identifier: ci_schedule_view
+    :children:
+    - :name: List
+      :description: Display Lists of CICD Schedules
+      :feature_type: view
+      :identifier: ci_schedule_show_list
+    - :name: Show
+      :description: Display Individual CICD Schedule
+      :feature_type: view
+      :identifier: ci_schedule_show
+    - :name: Utilization
+      :description: Show Capacity & Utilization data of Schedule
+      :feature_type: view
+      :identifier: ci_schedule_perf
+    - :name: Timeline
+      :description: Display Timelines for CICD Schedules
+      :feature_type: view
+      :identifier: ci_schedule_timeline
+  - :name: Operate
+    :description: Perform Operations on CICD Schedules
+    :feature_type: control
+    :identifier: ci_schedule_control
+    :children:
+    - :name: Edit Tags
+      :description: Edit Tags of CICD Schedules
+      :feature_type: control
+      :identifier: ci_schedule_tag

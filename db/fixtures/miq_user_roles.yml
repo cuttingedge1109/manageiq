@@ -37,6 +37,7 @@
   - event_streams
   - container_dashboard
   - ems_container
+  - ems_cicd
   - configuration_job
   - ems_configuration
   - configuration_profile

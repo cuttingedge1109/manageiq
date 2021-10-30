@@ -40,7 +40,7 @@ RSpec.describe Vmdb::Plugins do
       expect(asset_path.namespace).to eq "manageiq-ui-classic"
     end
 
-    it "with engines with inflections" do
+    it "with engines with inflections", :skip => "Waiting on replacement plugin specifying inflections like v2v did" do
       asset_paths = described_class.asset_paths
 
       asset_path = asset_paths.detect { |ap| ap.name == "ManageIQ::V2V::Engine" }

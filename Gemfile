@@ -103,23 +103,6 @@ gem "american_date"
 # This default is used to automatically require all of our gems in processes that don't specify which bundler groups they want.
 #
 ### providers
-
-group :ansible_tower, :manageiq_default do
-  manageiq_plugin "manageiq-providers-ansible_tower"
-end
-
-group :kubernetes, :openshift, :manageiq_default do
-  manageiq_plugin "manageiq-providers-kubernetes"
-end
-
-group :kubevirt, :manageiq_default do
-  manageiq_plugin "manageiq-providers-kubevirt"
-end
-
-group :redfish, :manageiq_default do
-  manageiq_plugin "manageiq-providers-redfish"
-end
-
 group :qpid_proton, :optional => true do
   gem "qpid_proton",                    "~>0.30.0",          :require => false
 end
@@ -130,27 +113,9 @@ group :systemd, :optional => true do
   gem "systemd-journal",                "~>1.4.2",           :require => false
 end
 
-group :openshift, :manageiq_default do
-  manageiq_plugin "manageiq-providers-openshift"
-end
-
-group :openstack, :manageiq_default do
-  manageiq_plugin "manageiq-providers-openstack"
-end
-
-group :vmware, :manageiq_default do
-  manageiq_plugin "manageiq-providers-vmware"
-end
-
 ### shared dependencies
 group :google, :openshift, :manageiq_default do
   gem "sshkey",                         "~>1.8.0",           :require => false
-end
-
-### end of provider bundler groups
-
-group :automate, :seed, :manageiq_default do
-  manageiq_plugin "manageiq-automation_engine"
 end
 
 group :replication, :manageiq_default do

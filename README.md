@@ -27,6 +27,7 @@ rails server --binding 0.0.0.0
 
 ## Seed database
 ```
+RAILS_ENV=test
 rails db:seed
 ```
 `bin/setup` includes this command already. We use this command after fixture change.

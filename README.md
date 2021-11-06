@@ -31,3 +31,10 @@ RAILS_ENV=test
 rails db:seed
 ```
 `bin/setup` includes this command already. We use this command after fixture change.
+
+## logging level
+`config/settings/development.yml`
+```
+:log:
+  :level_rails: info #debug, warn
+```
